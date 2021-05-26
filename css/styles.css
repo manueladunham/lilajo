@@ -3,45 +3,216 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto', Arial, sans-serif;
-}
-
-/* header section */
-.navbar {
+  }
+  
+  header {
+      position:fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      display: block;
+      text-align: center;
+      position: relative;
+  }
+  
+  .navbar {
+      width: 100%;
+      padding-left: 0px;
+      padding-right: 0px;
+      border-radius: 0;
+      background-color: hsl(197, 62%, 75%);
+      color: steelblue;
+      clear:both;
+  }
+  
+  /* The sidebar menu */
+  .sidenav {
+      height: 100%;
+      width: 160px; /* Set the width of the sidebar */
+      position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+      z-index: 1; /* Stay on top */
+      top: 0; /* Stay at the top */
+      left: 0;
+      background-color: hsl(197, 62%, 75%);
+      overflow-x: hidden; /* Disable horizontal scroll */
+      padding-top: 10px;
+      padding-left: 5px;
+      color: SteelBlue;
+    }
+    
+    /* The navigation menu links */
+  .sidenav a {
+      padding: 6px 8px 6px 16px;
+      text-decoration: none;
+      font-size: 20px;
+      color: steelblue;
+      display: block;
+    }
+  
+  .sidenav h3 {
+      color: white;
+    }
+    
+    /* When you mouse over the navigation links, change their color */
+    .sidenav a:hover {
+      color: #f1f1f1;
+    }
+    
+    /* Style page content */
+    .main {
+      margin-left: 160px; /* Same as the width of the sidebar */
+      padding: 0px 0px;
+    }
+    
+    /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+    @media screen and (max-height: 450px) {
+      .sidenav {padding-top: 15px;}
+      .sidenav a {font-size: 18px;}
+    }
+  
+    #loginModal .modal-header {
+      background-color: hsl(197, 62%, 75%);
+      color: steelblue; 
+    }
+  
+    .cart a {
+      background-color: steelblue;
+      color: #fff;
+      cursor: pointer;
+      text-decoration: none;
+  }
+  
+  .image {
+      margin-right: 20px;
+      margin-left: 20px;
+      position: relative;
+      overflow: hidden;
+    }
+  
+    .add-cart {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 14px;
+      color: steelblue;
+    }
+    
+    .card button, .panel-footer button {
+      border: none;
+      outline: 0;
+      padding: 12px;
+      color: white;
+      background-color: steelblue;
+      text-align: center;
+      cursor: pointer;
+      width: 100%;
+      font-size: 18px;
+    }
+    
+  
+  /* ----------------- CART PAGE --------------- */
+  
+  .container-products {
+    max-width: 650px;
+    justify-content: space-around;
+    margin: 0 auto;
+    margin-top: 50px;
+  }
+  
+  .container-products ion-icon {
+    font-size: 25px;
+    color: blue;
+    margin-left: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  
+  .product-header {
     width: 100%;
-    padding-left: 0px;
-    padding-right: 0px;
-    border-radius: 0;
-    background-color: hsl(197, 62%, 75%);
-    color: steelblue;
-    clear:both;
-}
-
-.navbar-left li {
-    list-style-type: none;
-}
-
-.navbar-right li {
-    list-style-type: none;
-}
-
-.navbar-mobile {
-    display: none;
-}
-
-
-/* For mobile */
-@media (max-width:768px) {
-    .navbar-mobile {
-        display: flex;
-        list-style-type: none;
-        justify-content: space-around;
-        align-items: center;
-        border: 1px solid black;
+    max-width: 650px;
+    display: flex;
+    justify-content: flex-start;
+    border-bottom: 4px solid lightgray;
+    margin: 0 auto;
+  }
+  
+  .product-title {
+    width: 45%;
+  }
+  
+  .price {
+    width: 15%;
+    display: flex;
+    align-items: center;
+  }
+  
+  .quantity {
+    width: 30%;
+    display: flex;
+    align-items: center;
+  }
+  
+  .total {
+    width: 10%;
+    display: flex;
+    align-items: center;
+  }
+  
+  .product {
+    width: 45%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid lightgray;
+  }
+  
+  .product ion-icon {
+    cursor: pointer;
+    
+  }
+  
+  .products {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .products img {
+    width: 75px;
+  }
+  
+  .basketTotalContainer {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    padding: 10px 0;
+  }
+  
+  .basketTotalTitle {
+    width: 30%;
+  }
+  
+  .basketTotal {
+    width: 10%;
+  }
+  
+  @media(max-width: 500px) {
+    nav h2 {
         width: 100%;
-        height: 64px;
+        text-align: center;
+        margin-bottom: 10px;;
     }
-    .navbar-left,
-    .navbar-right {
-        display: none;
+  
+    .sm-hide {
+        display: none;;
     }
-}
+  
+    .products,
+    .product-header {
+        justify-content: center;
+    }
+  
+    .basketTotalContainer {
+        padding-right: 8%;
+    }
+  }
+  
