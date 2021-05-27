@@ -21,6 +21,7 @@
   background-color: #5dd9c1;
   color: navy;
   clear:both;
+  list-style-type: none;
 } 
 
 .nav-link {
