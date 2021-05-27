@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Bootstrap CSS-->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css" />
+    <script type="module" src="https://unpkg.com/ionicons@5.2.3/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@5.2.3/dist/ionicons/ionicons.js"></script>
+    <title>Lila-Jo Cart</title>
+</head>
+<body>
+
+    <header>
+        <div class="header-img"></div>
+    </header>     
+        
+    <!-- Navigation Bar -->      
+    <nav class="navbar navbar-expand-sm">
+        <div class="container">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item active"><a class="nav-link" href="index.html"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-female fa-lg"></i> LilaJo Girl</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contactUs"><i class="fa fa-address-card fa-lg"></i> Contact</a></li>
+            </ul>
+            <ul class="navbar-nav navbar-right">
+                <li class="nav-item cart"><a class="nav-link" href="cart.html"><ion-icon name="cart"></ion-icon> Cart  <span>0</span></a></li>
+            </ul>
+        </div>
+        </div>
+    </nav>
+    
+    <div class="container-products">
+        <div class="product-header">
+            <h5 class="product-title">ITEM</h5>
+            <h5 class="price sm-hide">PRICE</h5>
+            <h5 class="quantity">QUANTITY</h5>
+            <h5 class="total">TOTAL</h5>
+        </div>
+        <div class="products">
+
+        </div>
+        <div>
+            <button>Checkout</button>
+            <button>Cancel</button>
+        </div>
+    </div>
+    
+    <script src="js/main.js"></script>
+
+</body>
+</html>

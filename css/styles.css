@@ -3,7 +3,6 @@
   padding: 0;
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
-  color: indigo;
 }
   
 .header-img {
@@ -19,25 +18,39 @@
   padding-left: 0px;
   padding-right: 0px;
   border-radius: 0;
-  background-color: lightcoral;
-  color: indigo;
+  background-color: #5dd9c1;
+  color: navy;
   clear:both;
 } 
 
 .nav-link {
-  color: indigo;
+  color: navy;
+  font-size: 16px;
 }
   
 .cart a {
-  background-color: lemonchiffon;
-  color: indigo;
+  background-color: #acfcd9;
+  color: navy;
   cursor: pointer;
   text-decoration: none;
 }
-  
+
+h1{
+  font-family: 'Lobster', cursive;
+  color: navy;
+}
+
+.card {
+  font-size: 18px;
+  background-color: lightcoral;
+  color: white;
+}
+
 .add-cart {
-  font-size: 14px;
-  color: steelblue;
+  font-size: 16px;
+  font-weight: bold;
+  color: navy;
+  background-color: lemonchiffon;
 }
     
   
