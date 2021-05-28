@@ -4,9 +4,131 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Bootstrap CSS-->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css" />
+    <script type="module" src="https://unpkg.com/ionicons@5.2.3/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@5.2.3/dist/ionicons/ionicons.js"></script>
     <title>Checkout</title>
 </head>
 <body>
     
+    <div class="container">
+        <h1>Checkout</h1>
+        <h3>Your Information</h3>
+        <form id="shipBillForm" name="shipBillForm" class="needs-validation" novalidate="">
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <label for="firstName">First name</label>
+                <input type="text" class="form-control" id="firstName" placeholder="" value="" required="">
+                <div class="invalid-feedback"> Valid first name is required. </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <label for="lastName">Last name</label>
+                <input type="text" class="form-control" id="lastName" placeholder="" value="" required="">
+                <div class="invalid-feedback"> Valid last name is required. </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="you@example.com" value="" required="">
+                <div class="invalid-feedback"> Please enter a valid email address. </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <label for="phone">Phone </label>
+                <input type="phone" class="form-control" id="phone" placeholder="(123) 456-7890" value="" required="">
+                <div class="invalid-feedback"> Please enter a valid phone number. </div>
+            </div>
+        </div>
+        <h3>Shipping Address</h3>
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <label>Address</label>
+                <input for="shipBillForm" name="shipAddress" type="text" class="form-control" id="shipAddress" placeholder="1234 Main St" required="">
+                <div class="invalid-feedback"> Please enter your shipping address. </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <label>Address 2 <span class="text-muted">(Optional)</span></label>
+                <input for="shipBillForm" name="shipAddress2" type="text" class="form-control" id="shipAddress2" placeholder="Apartment or suite">
+            </div>
+            <div class="col-md-3 mb-3">
+                <label>State</label>
+                <input for="shipBillForm" name="shipState" type="text" class="form-control" id="shipState" placeholder="" required="">
+                <div class="invalid-feedback"> State required. </div>
+            </div>
+            <div class="col-md-3 mb-3">
+                <label>Zip</label>
+                <input for="shipBillForm" name="shipZip" type="text" class="form-control" id="shipZip" placeholder="" required="">
+                <div class="invalid-feedback"> Zip code required. </div>
+            </div>
+        </div>
+        <h3>Billing Address</h3>
+        <div class="custom-control custom-checkbox mb-3">
+            <input for="shipBillForm" name="sameAddress" type="checkbox" class="custom-control-input" id="sameAddress">
+            <label class="custom-control-label" for="sameAddress">Shipping address is the same as my billing address</label>
+        </div>
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <label>Address</label>
+                <input for="shipBillForm" name="billingAddress" type="text" class="form-control" id="billingAddress" placeholder="1234 Main St" required="">
+                <div class="invalid-feedback"> Please enter your shipping address. </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <label>Address 2 <span class="text-muted">(Optional)</span></label>
+                <input for="shipBillForm" name="billingAddress2" type="text" class="form-control" id="billingAddress2" placeholder="Apartment or suite">
+            </div>
+            <div class="col-md-3 mb-3">
+                <label>State</label>
+                <input for="shipBillForm" name="billingState" type="text" class="form-control" id="billingState" placeholder="" required="">
+                <div class="invalid-feedback"> State required. </div>
+            </div>
+            <div class="col-md-3 mb-3">
+                <label>Zip</label>
+                <input for="shipBillForm" name="billingZip" type="text" class="form-control" id="billingZip" placeholder="" required="">
+                <div class="invalid-feedback"> Zip code required. </div>
+            </div>
+        </div>
+        <h3>Payment Information</h3>
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <label for="cc-name">Name on card</label>
+                <input type="text" class="form-control" id="cc-name" placeholder="" required="">
+                <small class="text-muted">Full name as displayed on card</small>
+                <div class="invalid-feedback"> Name on card is required </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <label for="cc-number">Credit card number</label>
+                <input type="text" class="form-control" id="cc-number" placeholder="" required="">
+                <div class="invalid-feedback"> Credit card number is required </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 mb-3">
+                <label for="cc-expiration">Expiration</label>
+                <input type="text" class="form-control" id="cc-expiration" placeholder="" required="">
+                <div class="invalid-feedback"> Expiration date required </div>
+            </div>
+            <div class="col-md-3 mb-3">
+                <label for="cc-cvv">CVV</label>
+                <input type="text" class="form-control" id="cc-cvv" placeholder="" required="">
+                <div class="invalid-feedback"> Security code required </div>
+            </div>
+            <button class="btn btn-primary btn-lg btn-block mt-3" type="submit">Submit</button>
+        </div>
+    </form>
+
+    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="js/checkout.js"></script>
+    </div>
 </body>
 </html>
