@@ -11,6 +11,7 @@
   height: 400px;
   background: url(../img/lilajobanner.jpg);
   background-size: cover;
+  background-repeat: no-repeat;
   background-position: center;
 }
   
@@ -24,8 +25,6 @@
   clear:both;
   list-style-type: none;
 } 
-
-
 
 .nav-link {
   color: navy;
@@ -59,13 +58,28 @@ h1{
   background-color: lemonchiffon;
 }
 
+.aboutbuttons {
+  padding-top: 50px;
+}
+
+.footer-copyright {
+  text-align: center;
+  padding-top: 15px;
+  color: navy;
+}
+
 @media only screen and (max-width: 600px) {
   .header-img {
     max-width: auto;
     height: 160px;
   }
+
+  #aboutbuttons {
+    padding-top: 0px;
+  }
 }
-    
+
+
   
   /* ----------------- CART PAGE --------------- */
   
