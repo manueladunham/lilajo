@@ -7,7 +7,7 @@
 }
   
 .header-img {
-  width: 100%;
+  max-width: 100%;
   height: 400px;
   background: url(../img/lilajobanner.jpg);
   background-size: cover;
@@ -25,13 +25,14 @@
   list-style-type: none;
 } 
 
+
+
 .nav-link {
   color: navy;
   font-size: 16px;
 }
   
 .cart a {
-  background-color: #acfcd9;
   color: navy;
   cursor: pointer;
   text-decoration: none;
@@ -46,13 +47,23 @@ h1{
   font-size: 18px;
   background-color: lightcoral;
   color: white;
+  margin-bottom: 20px;
 }
 
 .add-cart {
   font-size: 16px;
   font-weight: bold;
+  padding: 8px;
+  width: 100%;
   color: navy;
   background-color: lemonchiffon;
+}
+
+@media only screen and (max-width: 600px) {
+  .header-img {
+    max-width: auto;
+    height: 160px;
+  }
 }
     
   
