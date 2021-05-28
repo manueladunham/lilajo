@@ -23,7 +23,7 @@
     <div class="container">
         <h1>Checkout</h1>
         <h3>Your Information</h3>
-        <form id="shipBillForm" name="shipBillForm" class="needs-validation" novalidate="">
+        <form action="thankyou.html" id="shipBillForm" name="shipBillForm" class="needs-validation" novalidate="">
         <div class="row">
             <div class="col-md-6 mb-3">
                 <label for="firstName">First name</label>
@@ -49,47 +49,47 @@
         <h3>Shipping Address</h3>
         <div class="row">
             <div class="col-md-6 mb-3">
-                <label>Address</label>
+                <label for="shipAddress">Address</label>
                 <input for="shipBillForm" name="shipAddress" type="text" class="form-control" id="shipAddress" placeholder="1234 Main St" required="">
                 <div class="invalid-feedback"> Please enter your shipping address. </div>
             </div>
             <div class="col-md-6 mb-3">
-                <label>Address 2 <span class="text-muted">(Optional)</span></label>
+                <label for="shipAddress2">Address 2 <span class="text-muted">(Optional)</span></label>
                 <input for="shipBillForm" name="shipAddress2" type="text" class="form-control" id="shipAddress2" placeholder="Apartment or suite">
             </div>
             <div class="col-md-3 mb-3">
-                <label>State</label>
+                <label for="shipState">State</label>
                 <input for="shipBillForm" name="shipState" type="text" class="form-control" id="shipState" placeholder="" required="">
                 <div class="invalid-feedback"> State required. </div>
             </div>
             <div class="col-md-3 mb-3">
-                <label>Zip</label>
+                <label for="shipZip">Zip</label>
                 <input for="shipBillForm" name="shipZip" type="text" class="form-control" id="shipZip" placeholder="" required="">
                 <div class="invalid-feedback"> Zip code required. </div>
             </div>
         </div>
         <h3>Billing Address</h3>
         <div class="custom-control custom-checkbox mb-3">
-            <input for="shipBillForm" name="sameAddress" type="checkbox" class="custom-control-input" id="sameAddress">
+            <input onchange="addressFunction()" for="shipBillForm" name="sameAddress" type="checkbox" class="custom-control-input" id="sameAddress">
             <label class="custom-control-label" for="sameAddress">Shipping address is the same as my billing address</label>
         </div>
         <div class="row">
             <div class="col-md-6 mb-3">
-                <label>Address</label>
+                <label for="billingAddress">Address</label>
                 <input for="shipBillForm" name="billingAddress" type="text" class="form-control" id="billingAddress" placeholder="1234 Main St" required="">
                 <div class="invalid-feedback"> Please enter your shipping address. </div>
             </div>
             <div class="col-md-6 mb-3">
-                <label>Address 2 <span class="text-muted">(Optional)</span></label>
+                <label for="billingAddress2">Address 2 <span class="text-muted">(Optional)</span></label>
                 <input for="shipBillForm" name="billingAddress2" type="text" class="form-control" id="billingAddress2" placeholder="Apartment or suite">
             </div>
             <div class="col-md-3 mb-3">
-                <label>State</label>
+                <label for="billingState">State</label>
                 <input for="shipBillForm" name="billingState" type="text" class="form-control" id="billingState" placeholder="" required="">
                 <div class="invalid-feedback"> State required. </div>
             </div>
             <div class="col-md-3 mb-3">
-                <label>Zip</label>
+                <label for="billingZip">Zip</label>
                 <input for="shipBillForm" name="billingZip" type="text" class="form-control" id="billingZip" placeholder="" required="">
                 <div class="invalid-feedback"> Zip code required. </div>
             </div>

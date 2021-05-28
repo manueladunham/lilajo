@@ -1,38 +1,16 @@
-window.onload = function() {
-    var shipBillForm = document.getElementById('shipBillForm');
-
-    var shipAddressInput = shipBillForm.shipAddress;
-    var shipAddress2Input = shipBillForm.shipAddress2;
-    var shipStateInput = shipBillForm.shipState;
-    var shipZipInput = shipBillForm.shipZip;
-    var shippingElements = [shipAddressInput, shipAddress2Input, shipStateInput, shipZipInput];
-
-    var sameAddressCheckbox = shipBillForm.sameAddress;
-
-    var billingAddressInput = shipBillForm.billingAddress;
-    var billingAddress2Input = shipBillForm.billingAddress2;
-    var billingStateInput = shipBillForm.billingZip;
-    var billingZipInput = shipBillForm.billingstate;
-    var billingElements = [billingAddressInput, billingAddress2Input, billingStateInput, billingZipInput];
-
-    sameAddressCheckbox.addEventListener("change", function(event) {
-        if (sameAddressCheckbox.checked) {
-            billingAddressInput.value = shipAddressInput.value;
-            billingAddress2Input.value = shipAddress2Input.value;
-            billingStateInput.value = shipStateInput.value;
-            billingZipInput = shipZipInput.value;
-            for (var i=0; i < billingElements.length; i++) {
-                billingElements[i].setAttribute("readonly","");
-            }
-        } else {
-            for (var i = 0; i < billingElements.length; i++) {
-                billingElements[i].value = "";
-                billingElements[i].removeAttribute("readonly");
-            } 
-        }
-    })
+function addressFunction() {
+    if (document.getElementById("sameAddress").checked) {
+        document.getElementById("billingAddress").value = document.getElementById("shipAddress").value;
+        document.getElementById("billingAddress2").value = document.getElementById("shipAddress2").value;
+        document.getElementById("billingState").value = document.getElementById("shipState").value;
+        document.getElementById("billingZip").value = document.getElementById("shipZip").value;
+    } else {
+        document.getElementById("billingAddress").value = "";
+        document.getElementById("billingAddress2").value = "";
+        document.getElementById("billingState").value = "";
+        document.getElementById("billingZip").value = "";
+    }
 }
-
 
 (function () {
     'use strict'
