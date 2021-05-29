@@ -66,10 +66,6 @@ h1{
   background-color: lemonchiffon;
 }
 
-.aboutbuttons {
-  padding-top: 50px;
-}
-
 .footer-copyright {
   text-align: center;
   padding-top: 15px;
@@ -78,14 +74,19 @@ h1{
 
 @media only screen and (max-width: 600px) {
   .header-img {
-    max-width: auto;
-    height: 160px;
-  }
-
-  #aboutbuttons {
-    padding-top: 0px;
+    height: 150px;
+    background-size: 100% 100%;
   }
 }
+
+@media only screen and (min-width: 768px) {
+  .header-img {
+    background-size: 100% 100%;
+    height: 300px;
+  }
+}
+
+
 
 
   

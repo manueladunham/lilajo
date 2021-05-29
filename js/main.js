@@ -2,8 +2,8 @@ let carts = document.querySelectorAll('.add-cart');
 
 let products = [ 
     {
-        name: "Powder Blue Peony Hair Clip",
-        tag: "powderbluepeonyhairclip",
+        name: "Peony Hair Clip",
+        tag: "peonyhairclip",
         price: 16.00,
         inCart: 0
     },
@@ -50,8 +50,8 @@ let products = [
         inCart: 0
     },
     {
-        name: "Navy Blue Floral",
-        tag: "navybluefloral",
+        name: "Navy Floral",
+        tag: "navyfloral",
         price: 8.00,
         inCart: 0
     },
