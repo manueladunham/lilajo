@@ -155,6 +155,8 @@ function totalCost( product, action ) {
     }
 }
 
+
+// If total is $35 or more, then shipping is free. If less than $35, then shipping is $7.95.
 function displayCart() {
     let cartItems = localStorage.getItem('productsInCart');
     cartItems = JSON.parse(cartItems);
