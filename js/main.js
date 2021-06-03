@@ -82,6 +82,7 @@ for(let i=0; i< carts.length; i++) {
     });
 }
 
+// Displays number of items in cart on Navbar
 function onLoadCartNumbers() {
     let productNumbers = localStorage.getItem('cartNumbers');
     if( productNumbers ) {
@@ -163,7 +164,7 @@ function displayCart() {
 
     let productContainer = document.querySelector('.products');
     
-    if( cartItems && productContainer ) {
+    if( cartItems && productContainer && cart < 35) {
         productContainer.innerHTML = '';
         Object.values(cartItems).map( (item, index) => {
             productContainer.innerHTML += 
@@ -183,6 +184,40 @@ function displayCart() {
             <div class="basketTotalContainer">
                 <h4 class="basketTotalTitle">Basket Total</h4>
                 <h4 class="basketTotal">$${cart}.00</h4>
+            </div>
+            <div class="shippingContainer">
+                <h4 class="shipping">Shipping</h4>
+                <h4 class="shippingFee">$7.95</h4>
+            </div>`
+
+        deleteButtons();
+        manageQuantity();
+    }
+
+    if( cartItems && productContainer && cart >= 35) {
+        productContainer.innerHTML = '';
+        Object.values(cartItems).map( (item, index) => {
+            productContainer.innerHTML += 
+            `<div class="product"><ion-icon name="close-circle"></ion-icon><img src="./img/${item.tag}.jpg" />
+                <span class="sm-hide">${item.name}</span>
+            </div>
+            <div class="price sm-hide">$${item.price}.00</div>
+            <div class="quantity">
+                <ion-icon class="decrease " name="arrow-dropleft-circle"></ion-icon>
+                    <span>${item.inCart}</span>
+                <ion-icon class="increase" name="arrow-dropright-circle"></ion-icon>   
+            </div>
+            <div class="total">$${item.inCart * item.price}.00</div>`;
+        });
+
+        productContainer.innerHTML += `
+            <div class="basketTotalContainer">
+                <h4 class="basketTotalTitle">Basket Total</h4>
+                <h4 class="basketTotal">$${cart}.00</h4>
+            </div>
+            <div class="shippingContainer">
+                <h4 class="shipping">Shipping</h4>
+                <h4 class="shippingFee">FREE</h4>
             </div>`
 
         deleteButtons();

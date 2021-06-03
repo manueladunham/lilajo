@@ -101,7 +101,7 @@ h1{
   
   .container-products ion-icon {
     font-size: 25px;
-    color: blue;
+    color: purple;
     margin-left: 10px;
     margin-right: 10px;
     cursor: pointer;
@@ -112,7 +112,7 @@ h1{
     max-width: 650px;
     display: flex;
     justify-content: flex-start;
-    border-bottom: 4px solid lightgray;
+    border-bottom: 4px solid slateblue;
     margin: 0 auto;
   }
   
@@ -176,6 +176,21 @@ h1{
   .basketTotal {
     width: 10%;
   }
+
+  .shippingContainer {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    padding: 10px 0;
+  }
+  
+  .shipping {
+    width: 30%;
+  }
+  
+  .shippingFee {
+    width: 10%;
+  }
   
   @media(max-width: 500px) {
     nav h2 {
@@ -193,7 +208,7 @@ h1{
         justify-content: center;
     }
   
-    .basketTotalContainer {
+    .basketTotalContainer, .shippingContainer {
         padding-right: 8%;
     }
   }
